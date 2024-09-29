@@ -1,9 +1,9 @@
 function getComputerPlay() {
     let playMode;
-    let randNum = Math.floor(Math.random() * 100) + 1;
-    if (randNum <= 33) {
+    let randNum = Math.floor(Math.random() * 3) + 1;
+    if (randNum == 1) {
         playMode = "rock";
-    } else if (randNum > 33 && randNum <= 66) {
+    }else if(randNum == 2) {
         playMode = "paper";
     } else {
         playMode = "scissor";
@@ -15,13 +15,6 @@ function getComputerPlay() {
 const buttonList = document.querySelector(".container > .playing-area > .playing-buttons");
 
 function gamePlay(userPlayMode, computerPlayMode) {
-    // if (userPlay==""){
-    //     return 0;
-    // } 
-    // let computerPlay = getComputerPlay();
-    // 1 => player wins
-    // 2 => computer wins
-    // 3 => draw(invalid input)
 
     let gameResult;
     if (userPlayMode === "rock") {
@@ -51,7 +44,7 @@ function playGame(userPlayMode, computerPlayMode){
 }
 
 
-const status_text = document.querySelector(".status-title");
+const status_text = document.querySelector("#status-title");
 const rounds = document.querySelector("#round");
 const humanScore = document.querySelector("#WIN");
 const drawScore = document.querySelector("#DRAW")
@@ -96,8 +89,10 @@ buttonList.addEventListener("click", (event)=>{
     if(rnd >= 5){
         if(win > loss){
             status_text.textContent = "Congratulations, You Won 👏";
-        } else {
+        } else if(loss >win) {
             status_text.textContent = "Sorry, You Lost! 😵‍💫"
+        } else {
+            status_text.textContent = "Game is a tie! 😊";
         }
         win = 0;
         draw = 0;
