@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="game.js"></script>
+    <title>Rock Paper Scissor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="game.js" defer></script>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="rounds">
+            <h2>Round <span id="round"></span></h2>
+        </div>
+        <div class="score-board">
+            <div class="human-score">
+                <h2>You Won <span id="WIN"></span></h2>
+            </div>
+            <div class="draw-score">
+                <h2>DRAW <span id="DRAW"></span></h2>
+            </div>
+            <div class="computer-score">
+                <h2>You Lost <span id="LOSS"></span></h2>
+            </div>
+        </div>
+        <div class="playing-area">
+            <div class="playing-buttons" id="playing-buttons">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissor">Scissor</button>
+            </div>
+            <div class="live-game">
+                <h1 class="status-title"></h1>
+                <h1 class="status-title"></h1>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
