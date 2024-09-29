@@ -24,18 +24,18 @@ function gamePlay(userPlayMode, computerPlayMode) {
     // 3 => draw(invalid input)
 
     let gameResult;
-    if (userPlay === "rock") {
-        if (computerPlay === "paper") gameResult = 2;
-        if (computerPlay === "scissor") gameResult = 1;
-    } else if (userPlay === "paper") {
-        if (computerPlay === "rock") gameResult = 1;
-        if (computerPlay === "scissor") gameResult = 2;
-    } else if (userPlay === "scissor") {
-        if (computerPlay === "rock") gameResult = 2;
-        if (computerPlay === "paper") gameResult = 1;
+    if (userPlayMode === "rock") {
+        if (computerPlayMode === "paper") gameResult = 2;
+        if (computerPlayMode === "scissor") gameResult = 1;
+    } else if (userPlayMode === "paper") {
+        if (computerPlayMode === "rock") gameResult = 1;
+        if (computerPlayMode === "scissor") gameResult = 2;
+    } else if (userPlayMode === "scissor") {
+        if (computerPlayMode === "rock") gameResult = 2;
+        if (computerPlayMode === "paper") gameResult = 1;
     }
 
-    if(userPlay == computerPlay){
+    if(userPlayMode == computerPlayMode){
         gameResult = 3;
     }
     return gameResult;   
